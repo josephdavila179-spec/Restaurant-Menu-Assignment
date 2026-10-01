@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Restaurant Menus</title>
+  <style>
+    /* Global Styles */
+    body {
+      font-family: 'Georgia', serif;
+      background-color: #121212;
+      color: #333;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      margin: 0;
+      padding: 20px;
+    }
+
+    /* Common Menu Div Container Styles */
+    .menu-card {
+      width: 400px;
+      height: 550px;
+      margin: 20px;
+      padding: 25px;
+      box-sizing: border-box;
+      border-radius: 12px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      color: #ffffff;
+      text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+    }
+
+    /* Typography & Layout inside Menus */
+    .menu-card h1 {
+      font-size: 2rem;
+      text-align: center;
+      margin-top: 0;
+      margin-bottom: 15px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      border-bottom: 2px solid currentColor;
+      padding-bottom: 8px;
+    }
+
+    .menu-section-title {
+      font-size: 1.1rem;
+      font-weight: bold;
+      text-transform: uppercase;
+      margin-top: 10px;
+      margin-bottom: 8px;
+      letter-spacing: 1px;
+    }
+
+    .menu-item {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 8px;
+      font-size: 0.95rem;
+    }
+
+    .item-name {
+      font-weight: 500;
+    }
+
+    .item-price {
+      font-weight: bold;
+    }
+
+    .item-desc {
+      font-size: 0.8rem;
+      font-style: italic;
+      margin-top: -4px;
+      margin-bottom: 8px;
+      opacity: 0.9;
+    }
+
+    /* -------------------------------------------------------------
+       1. BREAKFAST MENU SPECIFIC STYLES
+       ------------------------------------------------------------- */
+    .breakfast-menu {
+      /* Unique Background Image */
+      background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.6)), 
+                        url('https://images.unsplash.com/photo-1533089860892-a7c6f0a88666?auto=format&fit=crop&w=800&q=80');
+      
+      /* Background Properties Applied */
+      background-size: cover;
+      background-position: center center;
+      background-repeat: no-repeat;
+
+      /* Border Styling */
+      border: 4px double #f39c12;
+      color: #fff8e7;
+    }
+
+    .breakfast-menu h1 {
+      color: #f39c12;
+    }
+
+    .breakfast-menu .menu-section-title {
+      color: #f1c40f;
+    }
+
+    /* -------------------------------------------------------------
+       2. LUNCH MENU SPECIFIC STYLES
+       ------------------------------------------------------------- */
+    .lunch-menu {
+      /* Unique Background Image */
+      background-image: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.65)), 
+                        url('https://images.unsplash.com/photo-1540420773420-3366772f4999?auto=format&fit=crop&w=800&q=80');
+      
+      /* Background Properties Applied */
+      background-size: cover;
+      background-position: top center;
+      background-repeat: no-repeat;
+
+      /* Border Styling */
+      border: 3px solid #2ecc71;
+      color: #e8f8f5;
+    }
+
+    .lunch-menu h1 {
+      color: #2ecc71;
+    }
+
+    .lunch-menu .menu-section-title {
+      color: #a3e4d7;
+    }
+
+    /* -------------------------------------------------------------
+       3. DINNER MENU SPECIFIC STYLES
+       ------------------------------------------------------------- */
+    .dinner-menu {
+      /* Unique Background Image */
+      background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.7)), 
+                        url('https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=800&q=80');
+      
+      /* Background Properties Applied */
+      background-size: cover;
+      background-position: bottom center;
+      background-repeat: no-repeat;
+
+      /* Border Styling */
+      border: 2px dashed #e74c3c;
+      color: #fadbd8;
+    }
+
+    .dinner-menu h1 {
+      color: #e74c3c;
+    }
+
+    .dinner-menu .menu-section-title {
+      color: #f1948a;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- BREAKFAST MENU -->
+  <div class="menu-card breakfast-menu">
+    <div>
+      <h1>Breakfast</h1>
+      
+      <div class="menu-section-title">Food Items</div>
+      
+      <div class="menu-item">
+        <span class="item-name">Classic Pancakes</span>
+        <span class="item-price">$9.50</span>
+      </div>
+      <div class="item-desc">Stacked with butter and warm maple syrup.</div>
+
+      <div class="menu-item">
+        <span class="item-name">Avocado Toast</span>
+        <span class="item-price">$11.00</span>
+      </div>
+      <div class="item-desc">Sourdough, poached eggs, red pepper flakes.</div>
+
+      <div class="menu-item">
+        <span class="item-name">Farmer's Omelet</span>
+        <span class="item-price">$12.50</span>
+      </div>
+      <div class="item-desc">Three eggs, spinach, bacon, and cheddar.</div>
+
+      <div class="menu-section-title">Drinks</div>
+
+      <div class="menu-item">
+        <span class="item-name">Cold Brew Coffee</span>
+        <span class="item-price">$4.50</span>
+      </div>
+
+      <div class="menu-item">
+        <span class="item-name">Fresh Orange Juice</span>
+        <span class="item-price">$3.75</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- LUNCH MENU -->
+  <div class="menu-card lunch-menu">
+    <div>
+      <h1>Lunch</h1>
+      
+      <div class="menu-section-title">Food Items</div>
+
+      <div class="menu-item">
+        <span class="item-name">Artisan Burger</span>
+        <span class="item-price">$14.00</span>
+      </div>
+      <div class="item-desc">Angus beef, brioche bun, house sauce & fries.</div>
+
+      <div class="menu-item">
+        <span class="item-name">Mediterranean Bowl</span>
+        <span class="item-price">$13.50</span>
+      </div>
+      <div class="item-desc">Quinoa, tzatziki, cucumbers, grilled chicken.</div>
+
+      <div class="menu-item">
+        <span class="item-name">Caprese Panini</span>
+        <span class="item-price">$11.50</span>
+      </div>
+      <div class="item-desc">Fresh mozzarella, tomatoes, pesto, balsamico.</div>
+
+      <div class="menu-section-title">Drinks</div>
+
+      <div class="menu-item">
+        <span class="item-name">Iced Hibiscus Tea</span>
+        <span class="item-price">$3.50</span>
+      </div>
+
+      <div class="menu-item">
+        <span class="item-name">Sparkling Lemonade</span>
+        <span class="item-price">$4.00</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- DINNER MENU -->
+  <div class="menu-card dinner-menu">
+    <div>
+      <h1>Dinner</h1>
+      
+      <div class="menu-section-title">Food Items</div>
+
+      <div class="menu-item">
+        <span class="item-name">Ribeye Steak</span>
+        <span class="item-price">$28.00</span>
+      </div>
+      <div class="item-desc">12oz cut with garlic herb butter & asparagus.</div>
+
+      <div class="menu-item">
+        <span class="item-name">Pan-Seared Salmon</span>
+        <span class="item-price">$24.00</span>
+      </div>
+      <div class="item-desc">Wild salmon over wild rice and lemon dill cream.</div>
+
+      <div class="menu-item">
+        <span class="item-name">Truffle Mushroom Risotto</span>
+        <span class="item-price">$20.00</span>
+      </div>
+      <div class="item-desc">Arborio rice, wild mushrooms, parmesan cheese.</div>
+
+      <div class="menu-section-title">Drinks</div>
+
+      <div class="menu-item">
+        <span class="item-name">House Cabernet</span>
+        <span class="item-price">$9.00</span>
+      </div>
+
+      <div class="menu-item">
+        <span class="item-name">San Pellegrino (750ml)</span>
+        <span class="item-price">$6.00</span>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
